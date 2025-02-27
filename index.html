@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery</title>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Glass Gallery</h1>
+            <div class="filters" id="filters"></div>
+            <button class="add-btn" id="openModal">+ Add Image</button>
+        </header>
+
+        <main class="gallery" id="gallery"></main>
+
+        <!-- Modal Add Image -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add New Image</h2>
+                <form id="imageForm">
+                    <input type="text" id="imageUrl" placeholder="Image URL" required>
+                    <input type="text" id="title" placeholder="Title" required>
+                    <textarea id="description" placeholder="Description" required></textarea>
+                    <input type="text" id="tags" placeholder="Tags (comma separated)" required>
+                    <button type="submit">Add Image</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal View Image -->
+        <div class="view-modal" id="viewModal">
+            <span class="close-view">&times;</span>
+            <img class="view-modal-content" id="expandedImg">
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
